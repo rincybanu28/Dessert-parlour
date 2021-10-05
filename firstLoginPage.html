@@ -1,0 +1,286 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>login </title>
+
+    <script>
+        function myFunction()
+        {
+            var em=document.forms["myForm"]["email"].value;
+            var pw=document.forms["myForm"]["password"].value;
+            if(em=="rincy@gmail.com" && pw=="rin12")
+            {
+                window.location.href="food.html";
+                return false;
+            }
+            else
+            {
+                alert("Invalid User Name and Password");
+            }
+        }
+
+        function loader(){
+        document.querySelector('.loader-container').classList.add('fade-out');
+        }
+
+        function fadeOut(){
+        setInterval(loader, 5000);
+        }
+
+        window.onload = fadeOut();
+    </script>
+
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+      
+        .main
+        {
+            width: 100%;
+            background-image: url(blueberry2.jpg);
+            opacity: 0.9;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+
+        .navbar
+        {
+            width: 1200px;
+            height: 75px;
+            margin: auto;
+        }
+
+        .icon
+        {
+            width: 200px;
+            float: left;
+            height: 70px;
+        }
+        .logo
+        {
+            color: rgb(207, 194, 174);
+            font-size: 74px;
+            opacity: 1;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding-left: 1px;
+            float: left;
+            padding-top:150px;
+        }
+        .content
+        {
+            width: 1200px;
+            height: auto;
+            margin: auto;
+            color: white;
+            position: relative;
+            padding-top: 290px;
+            opacity:0.9;
+            font-family: cursive;
+
+        }
+
+        .content h2
+        {
+            opacity:0.6;
+        }
+
+        .form1
+        {
+            width: 250px;
+            height: 380px;
+            background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+            position: absolute;
+            top: -20px;
+            left: 870px;
+            border-radius: 10px;
+            padding: 25px;
+            
+        }
+
+        .form1 h2
+        {
+            width: 220px;
+            font-family: sans-serif;
+            text-align: center;
+            color:rgba(0,0,0);
+            font-size: 25px;
+            background-color: white;
+            border-radius: 10px;
+            margin: 2px;
+            padding: 8px;
+        }
+        .form1 input
+        {
+            width: 240px;
+            height: 35px;
+            background: transparent;
+            border-bottom: 1px solid white;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            color: white;
+            letter-spacing: 1px;
+            margin-top: 30px;
+            font-family: sans-serif;
+            font-size: medium;
+        }
+        .form1 input:focus
+        {
+            outline: none;
+        }
+        ::placeholder
+        {
+            color: white;
+            font-family: Arial;
+        }
+
+        .btn
+        {
+            width: 240px;
+            height: 40px;
+            background: rgb(238, 222, 190);
+            border: none;
+            margin-top: 30px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            color:black;
+            transition: 0.4s ease;
+        }
+
+        .btn:hover
+        {
+            background: rgb(51, 133, 51);
+            color:rgb(211, 186, 135);;
+            font-weight: bold;
+        }
+        .btn a
+        {
+            text-decoration: none;
+            color: black;
+            opacity: 1;
+            font-weight: bold;
+        }
+
+        .form1 .link
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        .form1 .link a
+        {
+            text-decoration: none;
+            color: rgb(211, 36, 12);
+
+        }
+        .liw
+        {
+            padding-top: 15px;
+            padding-bottom: 10px;
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .icons a
+        {
+            text-decoration: none;
+            color: white;
+        }
+
+        .icons ion-icon
+        {
+            color: white;
+            font-size: 25px;
+            padding-left: 28px;
+            padding-top: 5px;
+            transition: 0.3s ease;
+        }
+
+        .icons ion-icon:hover
+        {
+            color: rgb(211, 36, 12);
+        }
+
+
+        .loader-container{
+            position: fixed;
+            top:0; left:0;
+            z-index: 10;
+            background:white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height:100%;
+            width:100%;
+            
+            }
+
+        .loader-container.fade-out{
+            top:-200%;
+            
+            }
+        
+
+      
+    </style>
+</head>
+
+
+
+
+
+
+<body>
+
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">Dessert Parlour</h2>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2>Explore The Universe Of Deliciousness !</h2>
+            <div class="form1">
+                <form name="myForm" method="post">
+                <h2>Login Here</h2>
+                <input type="email" name="email" placeholder="Email Address">
+                <input type="password" name="password" placeholder="Password"><br>
+                </form>
+
+                <button class="btn" name="log" onclick="myFunction()"><h3>Login</h3></a></button>
+                <p class="link">Don't have an account?<br>
+                <a href="#">Sign up </a>here</a></p>
+                <p class="liw">Log in with</p>
+
+                <div class="icons">
+                    <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                </div>
+               
+
+            </div>
+        </div>
+
+    </div>
+    <div class="loader-container">
+        <img src="gif2.gif" alt="">
+    </div>
+   
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+</html>
